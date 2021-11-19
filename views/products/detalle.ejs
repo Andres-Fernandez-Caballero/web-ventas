@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="es">
+    <%- include("../partials/head") %> 
+<body>
+    <%- include("../partials/header") %> 
+    <main>
+        <div class="producto-detalle">
+            <img src= <%= "/images/products/" + encodeURI(producto.image)%> >
+            <div class="texto-bajo-foto-detalle"><p>foto <%= producto.name %> </p></div>
+        </div>
+        <div class="descripcion-producto">
+            
+            <div class="nombre-detalle"><p><%= producto.name %></p></div>
+            <div class="descripcion-detalle"><p><%= producto.description %> </p></div>
+            <div class="precio-detalle">$<%= producto.price %> </div>
+            
+            <div class="cuotas-detalle">6 cuotas sin interes de $2.075</div>
+            <div class="envio-completar"><h4>Envio gratis </h4></div>
+            <div class="mas-vendido-detalle color-"></div>
+            
+            
+            <br>
+
+            <div class="comprar-detalle">
+                <a class="comprar" href="/products" style-li>Comprar</a>
+            </div>
+
+            <div class="comprar-detalle" >
+                <a href="/products/update/<%=producto.id%>">Editar</a>    
+            </div>
+
+            <div class="comprar-detalle" >
+                <form action="/products/delete/<%= producto.id %>?_method=DELETE" method="POST">
+                    <button style="color:crimson;font-weight: bolder;" id="eliminar" type="submit"> Eliminar</button>
+                </form>
+            </div>
+           
+        </div>
+    </div>
+        
+        
+        
+    </main>
+    <%- include("../partials/footer") %> 
+</body>
+</html>

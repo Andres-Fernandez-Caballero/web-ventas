@@ -1,0 +1,80 @@
+/* Login */
+
+.registro{
+    padding-top: 32px;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.form-item-container {
+    margin-bottom: 32px;
+}
+
+.form-container {
+    border: 1px solid #d4d1d1;
+    padding: 25px;
+}
+.formulario-input {
+    border: 1px solid black;
+}
+.texto-error {
+    color: red;
+}
+
+.titulo-login{
+    font-size: 20px;
+    padding-bottom: 20px;
+}
+.registro form {
+    width: 100%;
+    padding-bottom: 50px;
+}
+.registro form input {
+    width: 75%;
+    height: 35px;
+    border: 1px solid black;
+    border-radius: 2px;
+    margin-bottom: 8px;
+    margin-top: 10px;
+}
+.registro form label {
+    margin-bottom: 0;
+    font-size: 18px;
+    padding-bottom: 0;
+}
+
+.registro form button {
+    font-size: 18px;
+    font-weight: bold;
+    width: 75%;
+    background-color: black;
+    border-style: none;
+    color: white;
+    height: 35px;
+    border-radius: 2px;
+}
+button.entrar:hover {
+    background-color: #4762cf;
+}
+.botones {
+    display: flex;
+    margin-top: 25px;
+}
+.texto-notenes{
+    padding-bottom: 100px;
+    margin-top:10px;
+    margin-left: 5px;
+    margin-right: 5px;
+    font-weight: bold;
+}
+
+/*tablet*/
+@media (min-width: 481px) {
+
+    .pre-header {
+         display: block;
+    }
+    .registro{
+        display: flex;
+    }
+}

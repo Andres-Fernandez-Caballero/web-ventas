@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("../partials/head") %>
+<body>
+    <%- include("../partials/header") %>
+    <div class="fondo-list">
+    <div class="titulo-list">
+        <h2>
+            ¡Nuestros mejores productos!
+        </h2>
+    
+    </div>
+    <div class="row">
+        <% listaProductos.forEach(function(producto) { %>
+           
+            <div class="col-md-3 col-sm-6" >
+                    <%- include('../partials/card_product_list_item', {producto}) %>
+            </div>
+            
+        <% }); %> 
+    </div>
+    <%- include("../partials/footer") %>
+</div>
+</body>

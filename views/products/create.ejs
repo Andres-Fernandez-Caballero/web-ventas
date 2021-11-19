@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<%- include("../partials/head") %>
+
+<body>
+    <%- include("../partials/header") %>
+    <div class="create-product container">
+        <h1 class="cre-titulo mt-3">NUEVO PRODUCTO</h1>
+        
+        <% if(typeof errors !== 'undefined'){ %>
+            <section id="errores">
+                <h2>Errores</h2>
+                <p></p><%= errors.map(error => `Error ${error.param} mensaje: ${error.msg}`) %>
+            </section>    
+        <%} %>
+
+        <% if(typeof producto !== 'undefined' && typeof producto.id !== 'undefined'){%> 
+            <form
+            action="/products/update/<%= producto.id %>?_method=PUT" method="POST" enctype="multipart/form-data">
+            
+            <%}else{%>
+                <form action="/products/create" method="POST" enctype="multipart/form-data">
+            <%}%>
+           
+
+            <label for="nombre-producto">Nombre del producto</label> <br>
+            <input 
+                type="text" 
+                name="nombre" 
+                id="nombre"
+                value="<%= typeof producto !== 'undefined'? producto.name : '' %> "
+                
+                >
+                <br>
+                <label for="descripción">Descripción</label> <br>
+                <input type="text" name="descripcion" id="descripcion"
+                    value='<%= typeof producto !== 'undefined'? producto.description : '' %> '>
+                <br>
+                <label for="precio">Precio</label>
+                <br>
+                <input type="number" name="precio" id="precio"
+                    value='<%= typeof producto !== 'undefined'? producto.price : '' %>'>
+                <br>
+                <label for="imagen-producto">Imágenes</label>
+                <br>
+                <input 
+                    type="file" 
+                    name="imagen" 
+                    id="imagen"
+                    accept="image/png, image/jpeg, image/jpg, image/gif"
+                    value='<%= typeof producto !== 'undefined'? producto.image : '' %>'
+                    <% if(typeof producto === 'undefined'){ %>
+                    required
+                    <%}%>
+                >
+                <br>
+
+                <div class="cre-botones">
+                    <button class="cre-entrar btn btn-primary my-3"
+                        type="submit"><%= typeof producto !== 'undefined'? 'EDITAR': 'CREAR' %></button>
+                </div>
+            </form>
+    </div>
+    <%- include("../partials/footer") %>
+</body>
+
+</html>

@@ -1,0 +1,107 @@
+/* detalle de producto */
+
+/* mobile */
+body{
+    background-color: #ebebeb;
+}
+
+img{
+    width: 50%;
+    
+}
+.producto-detalle{
+    left: 20vw;
+    top: 20vh;
+    position: relative;
+   
+    height: 40vh;
+    width: 30vw;
+    text-align: center;
+    background-color: #fff;
+    
+    
+}
+.descripcion-producto{
+    position: relative;
+    left: 50vw;
+    top: -20vh;
+    background-color: #fff;
+    height: 40vh;
+    width: 30vw;
+    text-align: center;   
+   
+}
+
+a{
+    text-decoration:none;
+    color: black;
+    
+}
+
+
+.precio-detalle{
+font-size: 18px;
+font-weight: bold;
+}
+.cuotas-detalle{
+    padding-top: 5px;
+    color: lightslategrey;
+}
+.nombre-detalle{
+    padding-top: 5px;
+    background-color: #fff;
+}
+.precio-detalle{
+    padding-top: 5px;
+    background-color: #fff;
+}
+.mas-vendido-detalle{
+    padding-top: 5px;
+}
+
+.comprar-detalle{
+    display: inline-block;
+    font-size: 18px;
+    font-weight: bold;
+    width: 90%;
+    
+    border-style: none;
+    height: 35px;
+    border-radius: 0px;
+}
+.comprar-detalle:hover, .comprar-detalle:focus {
+    font-size: 20px;
+    
+  }
+
+#eliminar{
+    border:none;
+    font-weight: 550;
+    font-size: 18px;
+    background-color: #fff;
+}
+#eliminar :hover{
+    font-size: 20px;
+}
+
+  /* laptop*/ 
+
+  @media (max-width:769px) {
+    .nombre-detalle{
+        display: none;
+    }
+    
+    .descripcion-detalle{
+        display: none;
+    }
+    .texto-bajo-foto-detalle{
+        display: none;
+    }
+    .devolucion-detalle{
+        font-size: 14px;
+    }
+    .envio-detalle{
+        font-size: 14px;
+    }
+
+}
